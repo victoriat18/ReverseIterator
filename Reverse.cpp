@@ -27,6 +27,7 @@ public:
         int* ptr;
 
     public:
+    //sets starting position of the iterator in the array
         iterator(int* p) {
             ptr = p;
         }
@@ -45,11 +46,11 @@ public:
             return temp;
         }
     };
-
+//start of vector
     iterator begin() {
         return iterator(arr);
     }
-
+//end of vector, last element
     iterator end() {
         return iterator(arr + arr_size);
     }
@@ -62,7 +63,7 @@ public:
         reverse_iterator(int* p) {
             ptr = p;
         }
-
+//returns current value
         int& operator*() {
             return *ptr;
         }
@@ -80,7 +81,7 @@ public:
             return ptr != other.ptr;
         }
     };
-    
+
     //start and end of reverse loop
     reverse_iterator rbegin() {
         return reverse_iterator(arr + arr_size - 1);
