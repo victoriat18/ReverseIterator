@@ -1,7 +1,8 @@
 //Reverse Lab
 #include <iostream>
+//simple vector class with forward and reverse iterators
 using namespace std;
-
+//stores dynamic array of integers
 class vec {
 private:
     int* arr; // pointer to dynamic array
@@ -79,7 +80,8 @@ public:
             return ptr != other.ptr;
         }
     };
-
+    
+    //start and end of reverse loop
     reverse_iterator rbegin() {
         return reverse_iterator(arr + arr_size - 1);
     }
@@ -88,7 +90,7 @@ public:
         return reverse_iterator(arr - 1);
     }
 };
-
+//test and print out the foward and reverse iterators
 int main(){
     vec v(5);
 
